@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/rsvp")
+@CrossOrigin("*")
 public class RsvpController {
     @Autowired
     private RsvpRepository rsvpRepository;
