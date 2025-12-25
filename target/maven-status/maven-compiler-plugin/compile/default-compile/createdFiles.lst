@@ -1,0 +1,5 @@
+org\example\wedding3backend\controller\RsvpController.class
+org\example\wedding3backend\Wedding3BackendApplication.class
+org\example\wedding3backend\config\WebConfig.class
+org\example\wedding3backend\entity\RsvpReport.class
+org\example\wedding3backend\repository\RsvpRepository.class
