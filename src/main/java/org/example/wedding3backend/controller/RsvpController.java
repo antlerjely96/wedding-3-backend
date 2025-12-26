@@ -29,4 +29,9 @@ public class RsvpController {
     public List<RsvpReport> getAllRsvp(){
         return rsvpRepository.findAll();
     }
+
+    @GetMapping("/filter")
+    public List<RsvpReport> getReportsBySide(@RequestParam String side){
+        return rsvpRepository.findByGuestOf(side);
+    }
 }
