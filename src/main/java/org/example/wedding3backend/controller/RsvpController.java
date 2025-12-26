@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/rsvp")
 @CrossOrigin("*")
@@ -21,5 +23,10 @@ public class RsvpController {
         } catch (Exception e){
             return ResponseEntity.internalServerError().body("Lỗi: " + e.getMessage());
         }
+    }
+
+    @GetMapping
+    public List<RsvpReport> getAllRsvp(){
+        return rsvpRepository.findAll();
     }
 }
